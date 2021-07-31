@@ -9,7 +9,7 @@ var app = express();
 authTokens = {};
 
 //Adds a port
-app.set("port", process.eventNames.PORT || 3000);
+app.set("port", process.eventNames.PORT || 80);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
