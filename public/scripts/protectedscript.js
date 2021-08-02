@@ -184,15 +184,15 @@ function loadDate(date) {
         hideShifts();
 
         switch(date) {
-            case 'October2':
+            case 'October1':
                 document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "4:45pm-9:45pm";
+                document.getElementById('1').firstElementChild.innerText = "4:30pm-9:45pm";
                 break
 
+            case 'October2':
             case 'October3':
-            case 'October10':
                 document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "8:00am-11:45am";
+                document.getElementById('1').firstElementChild.innerText = "8:30am-11:45pm";
 
                 document.getElementById('2').style.display = "inline";
                 document.getElementById('2').firstElementChild.innerText = "11:30am-3:15pm";
@@ -205,40 +205,59 @@ function loadDate(date) {
                 break
 
             case 'October4':
-            case 'October11':
+            case 'October5':
+            case 'October6':
+            case 'October7':
                 document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "8:00am-11:45am";
+                document.getElementById('1').firstElementChild.innerText = "5:30am-8:45am";
+
+                document.getElementById('2').style.display = "inline";
+                document.getElementById('2').firstElementChild.innerText = "8:30am-12:15pm";
+
+                document.getElementById('3').style.display = "inline";
+                document.getElementById('3').firstElementChild.innerText = "12:00pm-4:15pm";
+
+                document.getElementById('4').style.display = "inline";
+                document.getElementById('4').firstElementChild.innerText = "4:00pm-7:00pm";
+                break
+
+            case 'October8':
+                document.getElementById('1').style.display = "inline";
+                document.getElementById('1').firstElementChild.innerText = "5:30am-9:00am";
+
+                document.getElementById('2').style.display = "inline";
+                document.getElementById('2').firstElementChild.innerText = "8:45am-12:30pm";
+
+                document.getElementById('3').style.display = "inline";
+                document.getElementById('3').firstElementChild.innerText = "12:15pm-5:00pm";
+
+                document.getElementById('4').style.display = "inline";
+                document.getElementById('4').firstElementChild.innerText = "4:45pm-9:45pm";
+                break
+
+            case 'October9':
+                document.getElementById('1').style.display = "inline";
+                document.getElementById('1').firstElementChild.innerText = "8:30am-11:45am";
 
                 document.getElementById('2').style.display = "inline";
                 document.getElementById('2').firstElementChild.innerText = "11:30am-3:15pm";
 
                 document.getElementById('3').style.display = "inline";
-                document.getElementById('3').firstElementChild.innerText = "3:00pm-7:45pm";
-                break
-
-            case 'October5':
-                document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "5:30am-9:00am";
-
-                document.getElementById('2').style.display = "inline";
-                document.getElementById('2').firstElementChild.innerText = "8:45am-12:30pm";
-
-                document.getElementById('3').style.display = "inline";
-                document.getElementById('3').firstElementChild.innerText = "12:15pm-4:30pm";
+                document.getElementById('3').firstElementChild.innerText = "3:00pm-6:30pm";
 
                 document.getElementById('4').style.display = "inline";
-                document.getElementById('4').firstElementChild.innerText = "4:15pm-7:45pm";
+                document.getElementById('4').firstElementChild.innerText = "6:15pm-9:45pm";
                 break
 
-            case 'October9':
+            case 'October10':
                 document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "5:30am-9:00am";
-
+                document.getElementById('1').firstElementChild.innerText = "8:30am-11:45am";
+    
                 document.getElementById('2').style.display = "inline";
-                document.getElementById('2').firstElementChild.innerText = "8:45am-12:30pm";
-
+                document.getElementById('2').firstElementChild.innerText = "11:30am-3:15pm";
+    
                 document.getElementById('3').style.display = "inline";
-                document.getElementById('3').firstElementChild.innerText = "12:15pm-4:30pm";
+                document.getElementById('3').firstElementChild.innerText = "3:00pm-5:45pm";
                 break
         }
     }
