@@ -113,8 +113,8 @@ router.post("/register", function(req, res){
         //The userObj will contain firstName, lastName, email, password
         MongoClient.connect(url, function(err, db) {
             var dbo = db.db(db_name);
-            
             if(validator.validate(req.body.email)){
+                req.body._id = req.body.email;
                 dbo.collection("Users").insertOne(req.body, function(err, result) {
                     //If the user already exists
                     if (err) {
