@@ -1,29 +1,120 @@
 <%- include ("../partial/_header.ejs"); %>
 <%- include ("../partial/_signupheader.ejs"); %>
-    <div class="container">
-        <div class="row" style="position: relative; top:10vh" >
-            
-            <div class=" col-md-0 col-lg-4"></div>
-            <div class="col-md-12 col-lg-4 formCustom">
-            <form>
-                <div class="form-group" style="position:relative;top:5vh;height:480px;">
-                    <label  for="emailaddress">Email address</label>
-                    <input style="font-size:20px;height: 40px; background-color:rgba(255, 255, 255, 0.74);"type="email" class="form-control" id="email" placeholder="name@example.com"><br>
-                    <label  for="phone">Phone Number</label>
-                    <input style="font-size:20px;height: 40px; background-color:rgba(255, 255, 255, 0.74);"type="Phone" class="form-control" id="phone" placeholder="123-456-7890"><br>
-                    <label  for="firstname">First name:</label><br>
-                    <input style="font-size:20px;height: 40px; background-color:rgba(255, 255, 255, 0.74);" type="text" class="form-control"id="firstName" name="firstname" placeholder="John"><br>
-                    <label  for="lastname">Last name:</label><br>
-                    <input style="font-size:20px;height: 40px; background-color:rgba(255, 255, 255, 0.74); ;" type="text" class="form-control"id="lastName" name="lastname" placeholder="Doe">
-                    <a onclick='register(event)' class='login'><span class="glyphicon glyphicon-pencil"></span>Signup</a>
+         
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>The Login Form</title>
+    <style>
+    *{
+          margin:0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      html{
+          height: 100%;
+      }
+      body{
+          font-family: 'Segoe UI', sans-serif;;
+          font-size: 1rem;
+          line-height: 1.6;
+          height: 100%;
+      }
+      .wrap {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .login-form{
+          width: 350px;
+          height: 425px;
+          margin: 10% auto;
+          border: 1px solid #ddd;
+          padding: 2rem;
+          background: #ffffff;
+          border-radius: 10px;
+          box-shadow: #69e769 3px 3px 8px 3px;
+          
+      }
+      .form-input{
+          background: #fafafa;
+          border: 1px solid #eeeeee;
+          padding: 12px;
+          height:100%;
+          width: 100%;
+      }
+      .form-group{
+          margin-bottom: 1rem;
+      }
+      .form-button{
+          background: #69e78f;
+          border: 1px solid #ddd;
+          color: #ffffff;
+          padding: 10px;
+          width: 100%;
+          text-transform: uppercase;
+      }
+      .form-button:hover{
+          background: #69e769;
+      }
+      .form-header{
+          text-align: center;
+          margin-bottom : 2rem;
+          margin-top : 4rem;
+      }
+      .form-footer{
+          text-align: center;
+      }
+      #content {
+       position: relative;
+   }
+   #content img {
+       position: absolute;
+       top: -20px;
+       left: -70px;
+       max-width: 150px;   
+       
+   }
+    </style>
+</head>
+<body>
+    <div  class="wrap">
+        <div id = "content" >
 
-                  </div> 
-            </form>      
-
+        <img src="images/apple.jpg" class=""/>
+            <form class="login-form" action="">
+            <div class="form-header">
+                <h3>Signup Form</h3>
+                <p>Make an account to Volunteer!</p>
             </div>
-            <div class="d-none d-sm-block col-sm-3 col-md-3 col-lg-4 "></div>
+            <!--Email Input-->
+            <div class="form-group">
+                <input class="form-input" type="email" id = "email" placeholder="email@example.com">
+            </div>
+            <!--Password Input-->
+            <div class="form-group">
+                <input type="Phone" class="form-input" id = "phone"placeholder="123-456-7890">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" id="firstName" name="firstname" placeholder="John">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" id="lastName" name="lastname" placeholder="Doe">
+            </div>
 
+            <!--Login Button-->
+            <div class="form-group">
+
+                <button  onclick='register(event)' class="form-button" type="submit">Signup</button>
+            </div>
+            <div class="form-footer">
+            Already have an account? <a href="/login">Log in</a>
+            </div>
+        </form>
         </div>
-
-    </div>
+        </div>
+</body>
+</html>
 <%- include ("../partial/_footer.ejs"); %>

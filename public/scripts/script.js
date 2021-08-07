@@ -108,7 +108,7 @@ function loadForgotPassword() {
 function forgotPassword(event) {
     event.preventDefault();
     var email = document.getElementById("emailForgot").value.toLowerCase();
-    
+    console.log("email sent")
     if (email != ""){
         userData = {email:email};
 
@@ -128,7 +128,7 @@ function forgotPassword(event) {
             var response = JSON.parse(http.response);
             alert(response); 
             if (response == "An email has been sent to you with your pin.") {
-                window.location.reload();
+                window.location.reload();   
             }
         };
     }

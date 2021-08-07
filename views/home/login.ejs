@@ -1,48 +1,138 @@
 <%- include ("../partial/_header.ejs"); %>
 <%- include ("../partial/_loginheader.ejs"); %>
-    <div class="container">
-        <div class="row" style="position: relative; top:10vh" >
-            
-            <div class=" col-md-0 col-lg-4"></div>
-            <div id="loginForm" class=" col-md-12 col-lg-4 formCustom" style="height:500px">
-            <form >
-                <div class="form-group" style="position:relative;top:5vh;">
-                    <label style="font-size:20px;" for="usr">Email:</label>
-                    <input style="height: 42px;font-size:20px;background-color:rgba(255, 255, 255, 0.74);" type="text" class="form-control" id="email">
-                  </div>
-                  <div class="form-group" style="position:relative;top:7vh;">
-                    <label style="font-size:20px;"for="pwd">Pin:</label>
-                    <input style="height: 42px; font-size:20px;background-color:rgba(255, 255, 255, 0.74);"type="password" class="form-control" id="password">
-                    <a class='login' onclick="login(event)"><span class="glyphicon glyphicon-pencil mb-5"></span> Login</a><br>
-                    <a onclick="loadForgotPassword()" class='login'style="  "><span class="glyphicon glyphicon-pencil mb-5 mt-5"></span> Forgot Pin?</a><br>
-                    <a onclick="location.replace('/signup')" class='login'style="  "><span class="glyphicon glyphicon-pencil mt-5"></span> New? click here to Signup</a>
-
-                                      
-                  </div> 
-            </form>      
 
 
+
+
+    <head>
+      <title>The Login Form</title>
+      <style>
+      *{
+          margin:0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      html{
+          height: 100%;
+      }
+      body{
+          font-family: 'Segoe UI', sans-serif;;
+          font-size: 1rem;
+          line-height: 1.6;
+          height: 100%;
+      }
+      .wrap {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .login-form{
+          width: 350px;
+          height: 400px;
+          margin: 10% auto;
+          border: 1px solid #ddd;
+          padding: 2rem;
+          background: #ffffff;
+          border-radius: 10px;
+          box-shadow: #69e769 3px 3px 8px 3px;
+          
+      }
+      .form-input{
+          background: #fafafa;
+          border: 1px solid #eeeeee;
+          padding: 12px;
+          height:100%;
+          width: 100%;
+      }
+      .form-group{
+          margin-bottom: 1rem;
+      }
+      .form-button{
+          background: #69e78f;
+          border: 1px solid #ddd;
+          color: #ffffff;
+          padding: 10px;
+          width: 100%;
+          text-transform: uppercase;
+      }
+      .form-button:hover{
+          background: #69e769;
+      }
+      .form-header{
+          text-align: center;
+          margin-bottom : 2rem;
+          margin-top : 4rem;
+      }
+      .form-footer{
+          text-align: center;
+      }
+      #content {
+       position: relative;
+       padding:0px;
+   }
+   #content img {
+       position: absolute;
+       top: -20px;
+       left: -70px;
+       max-width: 150px;       
+   }
+      </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id = "content" >
+       <img src="images/apple.jpg" class=""/>
+
+          <form  class="login-form"  id="loginForm" action="">
+              <div class="form-header" >
+                  <h3>Login Form</h3>
+                  <p>Login to access your dashboard</p>
+              </div>
+              <!--Email Input-->
+              <div class="form-group">
+                  <input type="text" id="email" class="form-input" placeholder="Email@example.com">
+              </div>
+              <!--Password Input-->
+              <div class="form-group">
+                  <input type="password" class="form-input" placeholder="Pin" id="password">
+              </div>
+              <!--Login Button-->
+              <div class="form-group">
+                  <button class="form-button" onclick="login(event)" type="submit">Login</button>
+              </div>
+              <div>
+                 <a onclick="loadForgotPassword()"  onmouseover="this.style.color='#4080c6';" onmouseout="this.style.color='#4aa1ff'" class='form-footer'style="color: #4aa1ff;cursor: pointer;">Forgot Pin?</a><br>
+              </div>
+              <div class="form-footer">
+              Don't have an account? <a href="/signup"onclick="location.replace('/signup')">Sign Up</a>
+              </div>
+              </form>
+              <form  class="login-form"  id="forgotPasswordForm" style="display: none;">
+                <div class="form-header" >
+                    <h3>Forgot Pin Form</h3>
+                    <p>Enter your email to receive your pin</p>
                 </div>
-
-
-                <div id="forgotPasswordForm" class=" col-md-12 col-lg-4 formCustom" style="display:none; height:500px">
-                    
-                        <div class="form-group" style="position:relative;top:5vh;">
-                            <label style="font-size:2vh;" for="usr">Email:</label>
-                            <input style="height: 42px; font-size:20px;background-color:rgba(255, 255, 255, 0.74);" type="text" class="form-control" id="emailForgot">
-                          </div>
-                          <div class="form-group" style="position:relative;top:7vh;">
-                            <a class='login' onclick="forgotPassword(event)"><span class="glyphicon glyphicon-pencil"></span> Retrieve Pin</a>
-                                              
+                <!--Email Input-->
+                <div class="form-group">
+                    <input type="text" id="emailForgot" class="form-input" placeholder="Email@example.com">
+                </div>
+                <!--Password Input-->
+                <!--Login Button-->
+                <div class="form-group">
+                    <button class="form-button"  onclick="forgotPassword(event)" type="submit">Retreive Pin</button>
                           </div>   
-        
-        
-                          <a onclick="location.replace('/signup')" class='login'style="top:20vh;"><span class="glyphicon glyphicon-pencil"></span> New? click here to Signup</a>
-                        </div>    
-            <div class="d-none d-sm-block col-sm-3 col-md-3 col-lg-4 "></div>
-
-        </div>
-
-    </div>
+                          <div>
+                            Back to  <a   class='form-footer'style="position: relative;" href="/login"> Login</a><br>
+                          </div>
+                            <div class="form-footer">
+              Don't have an account? <a href="/signup"onclick="location.replace('/signup')">Sign Up</a>
+              </div>
+                          
+          </form>
+      </div>
+    </div><!--/.wrap-->
+  </body>
     
 <%- include ("../partial/_footer.ejs"); %>
