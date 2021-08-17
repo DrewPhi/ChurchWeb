@@ -39,11 +39,13 @@ function login(event){
 
 //Calls the backend to register the user for the site
 function register(event) {
+
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value.toLowerCase();
     var phone = document.getElementById("phone").value;
     
+
     //Reformats the phone number
     function formatPhoneNumber(phoneNumberString) {
         var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
@@ -75,8 +77,8 @@ function register(event) {
         
             //send request
             http.send(JSON.stringify(userData));
-        
             //response
+            console.log(userData)
             http.onload = function() {
                 var response = JSON.parse(http.response);
                 alert(response); 
@@ -108,7 +110,7 @@ function loadForgotPassword() {
 function forgotPassword(event) {
     event.preventDefault();
     var email = document.getElementById("emailForgot").value.toLowerCase();
-    console.log("email sent")
+
     if (email != ""){
         userData = {email:email};
 
