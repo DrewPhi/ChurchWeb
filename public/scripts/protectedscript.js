@@ -190,7 +190,6 @@ function loadDate(date) {
                 break
 
             case 'October2':
-            case 'October3':
                 document.getElementById('1').style.display = "inline";
                 document.getElementById('1').firstElementChild.innerText = "8:30am-11:45pm";
 
@@ -202,6 +201,16 @@ function loadDate(date) {
 
                 document.getElementById('4').style.display = "inline";
                 document.getElementById('4').firstElementChild.innerText = "6:15pm-9:45pm";
+                break
+            case 'October3':
+                document.getElementById('1').style.display = "inline";
+                document.getElementById('1').firstElementChild.innerText = "8:30am-11:45pm";
+
+                document.getElementById('2').style.display = "inline";
+                document.getElementById('2').firstElementChild.innerText = "11:30am-3:15pm";
+
+                document.getElementById('3').style.display = "inline";
+                document.getElementById('3').firstElementChild.innerText = "3:00pm-7:45pm";
                 break
 
             case 'October4':
@@ -223,16 +232,19 @@ function loadDate(date) {
 
             case 'October8':
                 document.getElementById('1').style.display = "inline";
-                document.getElementById('1').firstElementChild.innerText = "5:30am-9:00am";
+                document.getElementById('1').firstElementChild.innerText = "5:30am-8:45am";
 
                 document.getElementById('2').style.display = "inline";
-                document.getElementById('2').firstElementChild.innerText = "8:45am-12:30pm";
+                document.getElementById('2').firstElementChild.innerText = "8:30am-12:15pm";
 
                 document.getElementById('3').style.display = "inline";
-                document.getElementById('3').firstElementChild.innerText = "12:15pm-5:00pm";
+                document.getElementById('3').firstElementChild.innerText = "12:00pm-4:15pm";
 
                 document.getElementById('4').style.display = "inline";
-                document.getElementById('4').firstElementChild.innerText = "4:45pm-9:45pm";
+                document.getElementById('4').firstElementChild.innerText = "4:00pm-7:00pm";
+
+                document.getElementById('5').style.display = "inline";
+                document.getElementById('5').firstElementChild.innerText = "6:45pm-9:45pm";
                 break
 
             case 'October9':
